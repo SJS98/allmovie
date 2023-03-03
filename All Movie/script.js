@@ -29,7 +29,7 @@ function changeImg(){
   setInterval(changeImg(),3000);
 }
 
-//  setInterval(changeImg,3000);
+ setInterval(changeImg,3000);
 
 let email;
 let pass;
