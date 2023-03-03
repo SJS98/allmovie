@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Home - All Movie</title>
+</head>
+<body>
+  <nav class="navbar" >
+    <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
+    <ul class="menu">
+      <li><a href="#top"  onclick="isLogIn()">Home</a></li>
+
+      <li>
+        <a href="#movie-cards" id="bolly"  onclick="isLogIn()">Bollywood</a>
+        <div class="bol-menu" id="bol-menu"  onclick="isLogIn()">
+          <ul>
+            <h4 class="bactor" onclick="location.href='shahrukh.html'">
+              Shahrukh Khan</h4>
+            <h4 class="bactor" onclick="location.href='amir.html'">
+              Amir Khan</h4>
+            <h4 class="bactor" onclick="location.href='salman.html'">
+              Salman Khan</h4>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#movie-cards" id="holly"  onclick="isLogIn()">Hollywood</a>
+        <div class="hol-menu" id="hol-menu"  onclick="isLogIn()">
+          <ul>
+            <h4>Tom Cruise</h4>
+            <h4>Robert Downey</h4>
+            <h4>Johnny Depp</h4>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#movie-cards" id="tolly"  onclick="isLogIn()">Tollywood</a>
+        <div class="tol-menu" id="tol-menu"  onclick="isLogIn()">
+          <ul>
+            <h4>Allu Arjun</h4>
+            <h4>N.T.Jr.</h4>
+            <h4>Ram Charan</h4>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <a class="login" id="login">Log In</a>
+        <div class="login-canvas" id="login-canvas">
+          <button id="lobtn">Logout</button>
+          <h1 class="login-head" id="login-head">Log In</h1>
+          <br>
+          <div class="login-form" id="login-form">
+            <form action="#home">
+              <input type="email" placeholder="Email Id" id="email">
+              <input type="password" placeholder="Password" id="pass">
+              <input type="submit" value="Log In" onclick="checkCookie()">
+            </form>
+          </div>
+          <div class="login-options">
+            <abbr title="Google"><img src="../images/Login/google.png" alt="" ></abbr>
+            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt="" ></abbr>
+            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt="" ></abbr>
+          </div>
+          <div style="width:100%;display: flex;justify-content: center;"><h3 id="login-msg"></h3></div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="adds-section" id="top"  onclick="isLogIn()">
+    <div class="para">
+      <h1 class="heading">World's Best Movies</h1><br>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloremque aliquam perspiciatis? Ullam consequuntur iste quaerat eos velit.</p>
+    </div>
+
+    <div class="adds-block">
+      <img src="../images/home poster/kgf.jpg" alt="Movie Image" id="addimg">
+    </div>
+  </div>
+
+  <div class="movie-cards" id="movie-cards"  onclick="isLogIn()">
+    <div class="bol-movie">
+      <div class="mimg">
+        <img src="../images/mimgs/bb.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/gold.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/d2.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/dhamaal.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/halfgf.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/kagaz.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/padmavat.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/piku.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/rh.jfif">
+      </div>      
+      <div class="mimg">
+        <img src="../images/mimgs/shole.jfif">
+      </div>
+    </div>
+
+    <div class="hol-movie">
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/avt2.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/gladiator.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/lost.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/ripd.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/stallone.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/storm.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/thehollyadv.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/venom.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/sherlock.jfif">
+      </div>      
+      <div class="mimg">
+        <img src="../images/mimgs/Hollywood/martian.jfif">
+      </div>
+    </div>
+    <div class="tol-movie">
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/bahu.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/bajni.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/rrr.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/super.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/robot.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/kgf.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/liger.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/rebel.jfif">
+      </div>
+      <div class="mimg">
+        <img src="../images/mimgs/Tollywood/red.jfif">
+      </div>      
+      <div class="mimg">
+        <img src="../images/mimgs/shole.jfif">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>&copy; <span>Copyright</span> </h4>
+    <h4>&reg; Registered in 2023</h4>
+    <h4>Contact Us</h4>
+    <h4>Developed by Sabir Ali</h4>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

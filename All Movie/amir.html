@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Bollywood - Amir Khan</title>
+</head>
+<body>
+  <nav class="navbar" >
+    <h1 class="name"><span class="A">A</span>ll<span class="M">M</span>ovie</h1>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+
+      <li>
+        <a href="#movie-cards" id="bolly">Bollywood</a>
+        <div class="bol-menu" id="bol-menu">
+          <ul>
+            <h4 class="shahrukh" onclick="location.href='shahrukh.html'">Shahrukh Khan</h4>
+            <h4 class="bactor" onclick="location.href='amir.html'">Amir Khan</h4>
+            <h4 class="bactor" onclick="location.href='salman.html'">Salman Khan</h4>
+          </ul>
+        </div>
+      
+      </li>
+      <li>
+        <a href="#movie-cards" id="holly">Hollywood</a>
+        <div class="hol-menu" id="hol-menu">
+          <ul>
+            <h4>Tom Cruise</h4>
+            <h4>Robert Downey</h4>
+            <h4>Johnny Depp</h4>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#movie-cards" id="tolly">Tollywood</a>
+        <div class="tol-menu" id="tol-menu">
+          <ul>
+            <h4>Allu Arjun</h4>
+            <h4>N.T.Jr.</h4>
+            <h4>Ram Charan</h4>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <a class="login" id="login">Log In</a>
+        <div class="login-canvas" id="login-canvas">
+          <h1 class="login-head" id="login-head">Log In</h1><br>
+          <div class="login-form">
+            <form action="">
+              <input type="email" placeholder="Email Id" id="email">
+              <input type="password" placeholder="Password" id="pass">
+              <input type="submit" value="Log In" onclick="validLogin()">
+            </form>
+          </div>
+          <div class="login-options">
+            <abbr title="Google"><img src="../images/Login/google.png" alt="" ></abbr>
+            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt="" ></abbr>
+            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt="" ></abbr>
+          </div>
+          <h3 id="login-error"></h3>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div class="shahrukh-div">
+  </div>
+
+  <div class="footer">
+    <h4>&copy; <span>Copyright</span> </h4>
+    <h4>&reg; Registered in 2023</h4>
+    <h4>Contact Us</h4>
+    <h4>Developed by Sabir Ali</h4>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
