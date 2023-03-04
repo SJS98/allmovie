@@ -28,18 +28,45 @@ body::-webkit-scrollbar{
   font-family:arial;
   transition-duration: .25s;
 }
+@media screen and (max-width: 400px) {
+  .name {
+    font-size: 15px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .mbtn{
+    display: none;
+  }
+  .navbar{
+    padding-right: 0px;
+  }
+  .menu{
+    height: 20px;
+    width: 150px;
+    padding-right: 0px;
+    margin-left: 0px;
+  }
+  .adds-block{
+    display: none;
+  }
+  .bol-movie,
+  .hol-movie,
+  .tol-movie{
+    /* margin-left: 0; */
+    width: 100%;
+  }
+}
 .name span{
   color:white;
   border: 2px solid white;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 .menu{
   list-style: none;
   font-family: 'Courier New', Courier, monospace;
 }
 .menu li{
-  margin-left: 50px;
   display:inline-block;
+  box-sizing: border-box;
 }
 .menu li a{
   text-decoration: none;
@@ -48,6 +75,7 @@ body::-webkit-scrollbar{
   border:2px solid black;
   transition-duration:.25s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 .login{
   padding: 5px;
@@ -68,9 +96,11 @@ body::-webkit-scrollbar{
   width:400px;
   margin: 60px;
   font-size: larger;
+  box-sizing: border-box;
 }
 .para h1{
   font-size: 60px;
+  box-sizing: border-box;
 }
 
 .adds-block{
@@ -83,6 +113,7 @@ body::-webkit-scrollbar{
 .adds-block img{ 
   height: 100%;
   width:100%;
+  box-sizing: border-box;
 }
 .adds-section{
   margin-top:10px;
@@ -119,29 +150,28 @@ body::-webkit-scrollbar{
   border-radius: 5px;
   transition-duration: .15s;
   opacity: .7;
+  box-sizing: border-box;
   display: none;
 }
 .link{ 
   text-decoration: none;
   border: none;
+  box-sizing: border-box;
 }
-
-
-
-
 .bol-menu h4, .hol-menu h4, .tol-menu h4{
   padding: 5px;
   border-radius: 5px;
   margin-left: -44px;
   transition-duration:.15s;
+  box-sizing: border-box;
 }
 #bolly:hover~#bol-menu,
 #holly:hover~#hol-menu,
 #tolly:hover~#tol-menu
 {
   top:45px;
+  box-sizing: border-box;
   display: block;
-  
 }
 
 .bol-menu:hover,
@@ -174,6 +204,7 @@ body::-webkit-scrollbar{
   border-radius: 5px;
   transition-duration: .15s;
   opacity: .7;
+  box-sizing: border-box;
   display: none;
 }
 /* Tollywood Menu */
@@ -188,6 +219,7 @@ body::-webkit-scrollbar{
   border-radius: 5px;
   transition-duration: .15s;
   opacity: .7;
+  box-sizing: border-box;
   display: none;
 }
 
@@ -203,6 +235,7 @@ body::-webkit-scrollbar{
   transition-duration: .5s;
   opacity: .9;
   box-shadow: 0px 1px 3px 0px white;
+  box-sizing: border-box;
   display: none;
 }
 .login-canvas button{
@@ -212,6 +245,7 @@ body::-webkit-scrollbar{
   top:80px;
   right: 100px;
   border-radius: 5px;
+  box-sizing: border-box;
   display: none;
 }
 #login:active~#login-canvas{
@@ -225,11 +259,13 @@ body::-webkit-scrollbar{
   color: white;
   font-size: 30px;
   margin:30px ;
+  box-sizing: border-box;
 }
 .login-form{
   margin:30px ;
   display: flex;  
   justify-content: center;
+  box-sizing: border-box;
 }
 .login-form input{
   height: 30px;
@@ -240,6 +276,7 @@ body::-webkit-scrollbar{
   border-radius: 6px;
   padding-left: 10px;
   transition-duration: .15s;
+  box-sizing: border-box;
   display: block;
 }
 
@@ -249,11 +286,12 @@ body::-webkit-scrollbar{
 .login-options{
   display: flex;
   justify-content: center;
-  
+  box-sizing: border-box;
 }
 .login-options img{
   height: 30px;
   margin: 10px;  
+  box-sizing: border-box;
 }
 .login-options img:hover{
   opacity: .7;
@@ -276,6 +314,7 @@ body::-webkit-scrollbar{
   box-shadow: 0px 0px 4px 0px white;
   display: flex;
   border-radius: 10px;
+  box-sizing: border-box;
   overflow: scroll;
 }
 
@@ -290,10 +329,12 @@ body::-webkit-scrollbar{
   align-items: center;
   height: 100%;
   margin-left: 10px;
+  box-sizing: border-box;
 }
 .mimg img{
   height: 95%;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 .mimg img:hover{
   opacity: .8;
@@ -310,6 +351,7 @@ body::-webkit-scrollbar{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .bol-menu ul a{

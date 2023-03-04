@@ -29,7 +29,7 @@ function changeImg(){
   setInterval(changeImg(),3000);
 }
 
- setInterval(changeImg,3000);
+//  setInterval(changeImg,3000);
 
 let email;
 let pass;
@@ -90,7 +90,6 @@ function logout(){
 
 // Cookies Operations
 
-
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -116,6 +115,7 @@ function getCookie(cname) {
 function checkCookie() {
   let uemail = getCookie("email");
   let upass = getCookie("pass");
+  document.getElementById("login-msg").innerHTML = "Logout successful.";
   if (uemail != "" && pass != "") {
     email = uemail;
     pass = upass;
