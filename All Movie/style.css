@@ -28,32 +28,7 @@ body::-webkit-scrollbar{
   font-family:arial;
   transition-duration: .25s;
 }
-@media screen and (max-width: 400px) {
-  .name {
-    font-size: 15px; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .mbtn{
-    display: none;
-  }
-  .navbar{
-    padding-right: 0px;
-  }
-  .menu{
-    height: 20px;
-    width: 150px;
-    padding-right: 0px;
-    margin-left: 0px;
-  }
-  .adds-block{
-    display: none;
-  }
-  .bol-movie,
-  .hol-movie,
-  .tol-movie{
-    /* margin-left: 0; */
-    width: 100%;
-  }
-}
+
 .name span{
   color:white;
   border: 2px solid white;
@@ -367,3 +342,40 @@ body::-webkit-scrollbar{
 
 
 /* Contact Us */
+
+
+/* Responsive */
+
+@media screen and (max-width: 400px) {
+  .name {
+    font-size: 15px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .mbtn{
+    display: none;
+  }
+  .navbar{
+    padding-right: 0px;
+  }
+  .menu{
+    height: 20px;
+    width: 150px;
+    padding-right: 0px;
+    margin-left: 0px;
+  }
+  .adds-block{
+    display: none;
+  }
+  .bol-movie,
+  .hol-movie,
+  .tol-movie{
+    /* margin-left: 0; */
+    width: 100%;
+  }
+  .footer{
+    /* display: block; */
+    font-size: 15px;
+  }
+  .t1,.t2{
+    display: none;
+  }
+}
