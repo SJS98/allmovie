@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  
 }
 body{
   margin:0;
@@ -15,13 +14,16 @@ body::-webkit-scrollbar{
 .navbar{
   position: sticky;
   top: 0%;
+  height: 50px;
   padding-left: 30px;
   padding-right: 40px;
   background-color: black;
+  box-shadow: 0px 0px 10px 0px black;
   color:red;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .name{
   font-size: 20px;
@@ -44,6 +46,7 @@ body::-webkit-scrollbar{
   box-sizing: border-box;
 }
 .menu li a{
+  margin-left:50px;
   text-decoration: none;
   color:red;
   padding: 5px;
@@ -73,11 +76,40 @@ body::-webkit-scrollbar{
   font-size: larger;
   box-sizing: border-box;
 }
-.para h1{
-  font-size: 60px;
-  box-sizing: border-box;
+/* paragraph */
+#para{ 
+  display: none;
+}
+.movie-type div{
+  font-size: 40px;
+  color: white;
+  text-shadow: 0px 0px 5px white;
 }
 
+.para h1{
+  font-size: 60px;
+  text-shadow:1px 1px 5px ;
+  box-sizing: border-box;
+}
+.aboutbtn{
+  background-color: black;
+  color: white;
+}
+.readbtn{
+  background-color: white;
+}
+.readbtn, .aboutbtn{
+  width:100px;
+  height:40px;
+  border: none;
+  opacity: .7;
+  border-radius: 3px;
+  transition-duration: .15s;
+}
+.readbtn:hover,.aboutbtn:hover{
+  border-radius: 2px;
+  opacity: 1;
+}
 .adds-block{
   height: 450px;
   width: 350px;
@@ -92,13 +124,16 @@ body::-webkit-scrollbar{
 }
 .adds-section{
   margin-top:10px;
-  padding-right: 100px;
+  /* padding-right: 100px; */
+  height: 500px;
   display: flex;
-  justify-content:space-between;
+  justify-content:space-evenly;
   align-items: center;
 }
 .heading{
   border:1px solid white;
+  box-shadow:inset 10px 10px 10px -5px white;
+  transition-duration: .25s;
   padding: 5px;
   border-radius: 5px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -107,28 +142,34 @@ body::-webkit-scrollbar{
   animation-timing-function: ease-in-out;
   animation-iteration-count:infinite;
 }
-
+.heading:hover{
+  box-shadow:inset -10px -10px 10px -5px white;
+}
 @keyframes tagline {
   50%{
     text-shadow:0px 0px 5px white;
   }
 }
+.bol-menu,.hol-menu,.tol-menu{
+  box-shadow:0px 20px 20px -5px black;
+}
+
 /* Bollywood Menu */
 .bol-menu{
-  position: absolute;
+  position: fixed;
   top: 50px;
-  left: 480px ;
+  margin-left: 30px;
   width: 135px;
   background-color: white;
   text-align: center;
-  padding: 5px ;
+  padding: 5px;
   border-radius: 5px;
   transition-duration: .15s;
   opacity: .7;
   box-sizing: border-box;
   display: none;
 }
-.link{ 
+.link{
   text-decoration: none;
   border: none;
   box-sizing: border-box;
@@ -144,7 +185,7 @@ body::-webkit-scrollbar{
 #holly:hover~#hol-menu,
 #tolly:hover~#tol-menu
 {
-  top:45px;
+  top:35px;
   box-sizing: border-box;
   display: block;
 }
@@ -154,7 +195,6 @@ body::-webkit-scrollbar{
 .tol-menu:hover
 {
   display: block;
-  
 }
 .bol-menu h4:hover,
 .hol-menu h4:hover,
@@ -169,9 +209,9 @@ body::-webkit-scrollbar{
 
 /* Hollywood Menu */
 .hol-menu{
-  position: absolute;
-  top:50px;
-  left: 640px ;
+  position: fixed;
+  top: 50px;
+  margin-left: 30px;
   width: 135px;
   background-color: white;
   text-align: center;
@@ -184,9 +224,9 @@ body::-webkit-scrollbar{
 }
 /* Tollywood Menu */
 .tol-menu{
-  position: absolute;
-  top:50px;
-  left: 800px ;
+  position: fixed;
+  top: 50px;
+  margin-left: 30px;
   width: 135px;
   background-color: white;
   text-align: center;
@@ -270,12 +310,14 @@ body::-webkit-scrollbar{
 }
 .login-options img:hover{
   opacity: .7;
+  transform: rotate(10deg)
 }
 .movie-cards{
   margin-top: 50px;
+  margin-bottom: 50px;
   height: 380px;
-  background-color: black;
-  opacity: .9;
+  background-color: white;
+  opacity: .7;
   overflow: hidden;
 }
 
@@ -286,7 +328,7 @@ body::-webkit-scrollbar{
   margin-top: 20px;
   height: 100px;
   width: 60%;
-  box-shadow: 0px 0px 4px 0px white;
+  box-shadow: 0px 0px 4px 0px black;
   display: flex;
   border-radius: 10px;
   box-sizing: border-box;
@@ -306,17 +348,20 @@ body::-webkit-scrollbar{
   margin-left: 10px;
   box-sizing: border-box;
 }
-.mimg img{
+.movie-cards img{
   height: 95%;
   border-radius: 10px;
   box-sizing: border-box;
+  box-shadow: 0px 0px 5px 0px black;
 }
-.mimg img:hover{
-  opacity: .8;
+.movie-cards img:hover{
+  /* opacity: .8; */
   cursor: pointer;
+  transform: scale(1.1);
+  transition: .15s;
+  box-shadow:inset 0px 0px 5px 0px black;
 }
 .footer{
-  margin-top: 5px;
   margin-left: 10%;
   border-radius: 20px;
   height:40px;
@@ -328,21 +373,23 @@ body::-webkit-scrollbar{
   align-items: center;
   box-sizing: border-box;
 }
-
+.movie-type{
+  height: 380px;
+  background-color: black;
+  width: 20%;
+  position: relative;
+  align-items: center;
+  top: -360px;
+  transition-duration: .15s;
+}
+.movie-cards:hover>.movie-type{
+  width: 30%;
+}
 .bol-menu ul a{
   text-decoration: none;
 }
 
-/* Actors HTML-> CSS */
-
-.shahrukh-div{
-  height: 412px;
-}
-
-
-
 /* Contact Us */
-
 
 /* Responsive */
 
@@ -378,4 +425,103 @@ body::-webkit-scrollbar{
   .t1,.t2{
     display: none;
   }
+}
+
+
+
+
+
+
+/* Actors HTML-> CSS */
+.movie,
+.image,
+.audio {
+  display: flex;
+  overflow: scroll;
+  height: fit-content;
+  align-items: center;
+}
+
+.movie::-webkit-scrollbar,
+.image::-webkit-scrollbar,
+.audio::-webkit-scrollbar{
+  display: none;
+}
+
+.movie img,
+.audio img
+{
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px -5px;
+  margin: 20px;
+  transition: all .15s;
+}
+
+.image img{
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px -5px;
+  margin: 20px;
+  transition: all .15s;
+}
+
+.image img:hover{
+  transform: scale(1.2);
+  cursor: zoom-in;
+}
+
+.movie img:hover,
+.audio img:hover{
+  transform: scale(0.9);
+}
+.movie{
+  height: 340px;
+}
+
+.image,.audio{
+  height: 340px;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+.options{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.op-icons{
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+}
+
+.movs,.auds,.imgs{
+  height: 30px ;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size:cover;
+  border-radius: 5px;
+  transition-duration: .15s;
+}
+.movs{
+  background-image: url(../images/icons/video-camera.png);
+}
+.imgs{
+  background-image: url(../images/icons/image.png);
+}
+.auds{
+  background-image: url(../images/icons/headphones.png);
+}
+.movs:hover,.imgs:hover,.auds:hover{
+  transform: scale(1.1);
 }

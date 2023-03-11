@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="style.css">
   <title>Home - All Movie</title>
 </head>
+
+<!--  onclick="isLogIn()" -->
 <body>
   <nav class="navbar" >
     <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
     <ul class="menu">
-      <li><a href="#top" class="mbtn" onclick="isLogIn()">Home</a></li>
+      <li><a href="#top" class="mbtn" >Home</a></li>
 
       <li>
-        <a href="#movie-cards" id="bolly" class="mbtn" onclick="isLogIn()">Bollywood</a>
-        <div class="bol-menu" id="bol-menu"  onclick="isLogIn()">
+        <a href="#movie-cards" id="bolly" class="mbtn" >Bollywood</a>
+        <div class="bol-menu" id="bol-menu"  >
           <ul>
             <h4 class="bactor" onclick="location.href='shahrukh.html'">
               Shahrukh Khan</h4>
@@ -27,8 +29,8 @@
         </div>
       </li>
       <li>
-        <a href="#movie-cards" id="holly" class="mbtn" onclick="isLogIn()">Hollywood</a>
-        <div class="hol-menu" id="hol-menu"  onclick="isLogIn()">
+        <a href="#movie-cards" id="holly" class="mbtn">Hollywood</a>
+        <div class="hol-menu" id="hol-menu"  >
           <ul>
             <h4>Tom Cruise</h4>
             <h4>Robert Downey</h4>
@@ -37,11 +39,11 @@
         </div>
       </li>
       <li>
-        <a href="#movie-cards" id="tolly" class="mbtn" onclick="isLogIn()">Tollywood</a>
-        <div class="tol-menu" id="tol-menu"  onclick="isLogIn()">
+        <a href="#movie-cards" id="tolly" class="mbtn" >Tollywood</a>
+        <div class="tol-menu" id="tol-menu"  >
           <ul>
             <h4>Allu Arjun</h4>
-            <h4>N.T.Jr.</h4>
+            <h4>Jr.N.T.R</h4>
             <h4>Ram Charan</h4>
           </ul>
         </div>
@@ -61,9 +63,9 @@
             </form>
           </div>
           <div class="login-options">
-            <abbr title="Google"><img src="../images/Login/google.png" alt="" ></abbr>
-            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt="" ></abbr>
-            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt="" ></abbr>
+            <abbr title="Google"><img src="../images/Login/google.png" alt=""></abbr>
+            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt=""></abbr>
+            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt=""></abbr>
           </div>
           <div style="width:100%;display: flex;justify-content: center;"><h3 id="login-msg"></h3></div>
         </div>
@@ -71,10 +73,13 @@
     </ul>
   </nav>
 
-  <div class="adds-section" id="top"  onclick="isLogIn()">
+  <div class="adds-section" id="top"  >
     <div class="para">
       <h1 class="heading">World's Best Movies</h1><br>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod explicabo doloremque aliquam perspiciatis? Ullam consequuntur iste quaerat eos velit.</p>
+      <p>How many times have you sat down for the evening, gotten comfortable with your drink, put on your lounge pants.</p>
+      <p id="para"> And then you discover there are no good movies to watch? For most people, it happens frequently. </p>
+      <button class="readbtn" onclick="paraVisible()">Read more</button>
+      <button class="aboutbtn">Collapse</button>
     </div>
 
     <div class="adds-block">
@@ -82,7 +87,7 @@
     </div>
   </div>
 
-  <div class="movie-cards" id="movie-cards"  onclick="isLogIn()">
+  <div class="movie-cards" id="movie-cards">
     <div class="bol-movie">
       <div class="mimg">
         <img src="../images/mimgs/bb.jfif">
@@ -180,6 +185,19 @@
         <img src="../images/mimgs/shole.jfif">
       </div>
     </div>
+
+    <div class="movie-type">
+      <!-- <div class="btype">
+        <p>Bollywood</p>
+      </div>
+      <div class="htype">
+        <p>Hollywood</p>
+      </div>
+      <div class="ttype">
+        <p>Tollywood</p>
+      </div> -->
+    </div>
+
   </div>
 
   <div class="footer">
@@ -190,7 +208,6 @@
     <!-- <h4 id="em" style="display:none">sabiralishaikh355@gmail.com</h4> -->
     
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
