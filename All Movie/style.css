@@ -525,3 +525,8 @@ body::-webkit-scrollbar{
 .movs:hover,.imgs:hover,.auds:hover{
   transform: scale(1.1);
 }
+
+.gt{
+  width: 108px;
+  overflow: hidden;
+}
