@@ -277,7 +277,6 @@ body::-webkit-scrollbar{
   box-sizing: border-box;
 }
 .login-form{
-  margin:10px ;
   display: flex;  
   justify-content: center;
   box-sizing: border-box;
@@ -294,7 +293,9 @@ body::-webkit-scrollbar{
   box-sizing: border-box;
   display: block;
 }
-
+.msg{
+  margin-top: -10px;
+}
 [type="submit"]:hover{
   background-color: rgb(168, 168, 168);
 }

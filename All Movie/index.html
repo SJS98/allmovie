@@ -36,14 +36,14 @@
 </style>
 <div id="loader" class="center"></div> -->
 
-<body onclick="isLogIn()">
+<body>
   <nav class="navbar">
     <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
     
     <ul class="menu">
-      <li><a href="#top" class="mbtn">Home</a></li>
+      <li onclick="isLogIn()"><a href="#top" class="mbtn">Home</a></li>
 
-      <li>
+      <li onclick="isLogIn()">
         <a href="#movie-cards" id="bolly" class="mbtn">Bollywood</a>
         <div class="bol-menu" id="bol-menu">
           <ul>
@@ -56,7 +56,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li onclick="isLogIn()">
         <a href="#movie-cards" id="holly" class="mbtn">Hollywood</a>
         <div class="hol-menu" id="hol-menu">
           <ul>
@@ -66,7 +66,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <li onclick="isLogIn()">
         <a href="#movie-cards" id="tolly" class="mbtn">Tollywood</a>
         <div class="tol-menu" id="tol-menu">
           <ul>
@@ -80,7 +80,7 @@
       <li>
         <a class="login" id="login">Log In</a>
         <div class="login-canvas" id="login-canvas">
-          <button id="lobtn">Logout</button>
+          <button id="lobtn" onclick="logOut()">Logout</button>
           <h1 class="login-head" id="login-head">Log In</h1>
           <br>
           <div class="login-form" id="login-form">
@@ -96,15 +96,16 @@
             <abbr title="Facebook"><img src="../images/Login/facebook.png" alt=""></abbr>
             <abbr title="Twitter"><img src="../images/Login/twitter.png" alt=""></abbr>
           </div>
-          <div style="width:100%;display: flex;justify-content: center;text-align: center;">
+          <div class="msg" style="width:100%;text-align: center;">
+            <h4 id="valid-msg"></h4>
             <h4 id="login-msg"></h4>
-          </div>
+            </div>
         </div>
       </li>
     </ul>
   </nav>
 
-  <div class="adds-section" id="top">
+  <div class="adds-section" id="top" onclick="isLogIn()">
     <div class="para">
       <h1 class="heading">World's Best Movies</h1><br>
       <p>How many times have you sat down for the evening, gotten comfortable with your drink, put on your lounge pants.
@@ -115,12 +116,12 @@
       <button class="aboutbtn">Collapse</button>
     </div>
 
-    <div class="adds-block">
+    <div class="adds-block" >
       <img src="../images/home poster/kgf.jpg" alt="Movie Image" id="addimg">
     </div>
   </div>
 
-  <div class="movie-cards" id="movie-cards">
+  <div class="movie-cards" id="movie-cards" onclick="isLogIn()">
     <div class="bol-movie">
       <div class="mimg">
         <img src="../images/mimgs/bb.jfif">
@@ -232,15 +233,16 @@
     </div>
 
   </div>
-  <div class="footer">
+  <div class="footer" >
     <h4 class="t1">&copy; <span>Copyright</span> </h4>
     <h4 class="t2">&reg; Registered in 2023</h4>
     <h4 class="t3" onclick="document.getElementById('em').display = 'block'" id="cont">Contact Us</h4>
     <h4 class="t4">Developed by Sabir Ali</h4>
     <!-- <h4 id="em" style="display:none">sabiralishaikh355@gmail.com</h4> -->
   </div>
-  <div id="google_translate_element" class="gt"></div>
+  
   <script src="script.js"></script>
+  <!-- <div id="google_translate_element" class="gt"></div>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>  
   function googleTranslateElementInit() {
@@ -249,7 +251,8 @@
         'google_translate_element'
       );
     }
-  </script>
+  </script> -->
+
 </body>
 
 </html>

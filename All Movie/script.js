@@ -6,7 +6,8 @@ options(1);
 // To run animation of poster
 //  setInterval(changeImg,3000);
 
-
+// To check user have account or not
+isLogIn();
 
 
 // Script for site...
@@ -43,18 +44,83 @@ function changeImg(){
 }
 
 /*************************************/
+// Login Alert
+function isLogIn(){
+  let email = localStorage.getItem('email');
+  let pass = localStorage.getItem('pass');
+  if(email==null || pass==null){
+    alert("Please log in first!!");
+  }else {
+    document.getElementById('login-head').style.display = "none";
+    document.getElementById('lobtn').style.display = "block";
+    document.getElementById('login-form').style.display = "none";
+  }
+}
+
+/*************************************/
+// Login Function
+function logIn(){
+  let email = document.getElementById('email').value;
+  let pass = document.getElementById('pass').value;
+  let localEmail = localStorage.getItem('email');
+  let localPass = localStorage.getItem('pass');
+  let msg = document.getElementById('login-msg');
+  if((email == localEmail) && (pass == localPass)){
+    document.getElementById('login-form').style.display = "none";
+    document.getElementById('lobtn').style.display = "block";
+    msg.innerText = "Log in successful!"
+  } else if((email == localEmail) && (pass != localPass)){
+    msg.innerText = "Wrong password"
+  } else if((email != localEmail) && (pass == localPass)){
+    msg.innerText = "Wrong email!"
+  } else if(localEmail == null || localPass==null){
+    msg.innerText = "Create account first!"
+  }
+}
+/*************************************/
+// log out function
+function logOut(){
+
+  localStorage.removeItem('email');
+  localStorage.removeItem('pass');
+
+  document.getElementById('login-head').style.display = "block";
+  document.getElementById('lobtn').style.display = "none";
+  document.getElementById('login-msg').innerText = "Log out successful!"
+  document.getElementById('login-form').style.display = "flex";  
+}
+
+/*************************************/
 // SignUp Validations and data storing 
 function signUp(){
-  validEmail();
-  validPass();
+  const ev = validEmail();
+  const pv = validPass();
+  if(ev && pv){
+    let email = document.getElementById('email').value;
+    let pass = document.getElementById('pass').value;
+
+    localStorage.setItem('email',email);
+    localStorage.setItem('pass',pass);
+    
+    document.getElementById('login-head').innerText = "Loged In";
+    document.getElementById('lobtn').style.display = "block";
+    document.getElementById('login-msg').innerText = "Your account has been Created!"
+    document.getElementById('login-form').style.display = "none";
+  }
 }
 
 /*************************************/
 // Email Validation
 function validEmail(){
+
   let email = document.getElementById('email').value;
-  let msg = document.getElementById('login-msg');
-  if(email.search("@")<3) msg.innerHTML += "Invalid Email"+"\n";
+  let msg = document.getElementById('valid-msg');
+  msg.innerText = "";
+  if(email.search("@")<3){ 
+    msg.innerHTML = "Invalid Email"+"\n";
+    return false;
+  }
+  return true;
 }
 
 /*************************************/
@@ -74,9 +140,9 @@ function validPass(){
 
   if(checkLen(pass) && checkUC(pass) && checkLC(pass) && checkNum(pass) && checkSpecial(pass)){
     msg.innerText = "Strong Password";
+    return true;
   }
-
-  return true;
+  return false;  
 }
 
 
@@ -180,16 +246,6 @@ function options(x){
 }
 /*************************************/
 
-
-
-/*************************************/
-// Login Alert 
-function isLogIn(){
-  let email = document.getElementById('email').value;
-  if(email==null || pass==null){ 
-    alert("Please log in first!!");
-  } 
-}
 
 
 
