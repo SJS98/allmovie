@@ -42,16 +42,83 @@ function changeImg(){
   setInterval(changeImg(),3000);
 }
 
-
-
-
-function validLogin(){
-  let emailRegEx = /[@]/;
-  let passRegEx = /[0-9][a-z][A-Z][~!@#$%^&*()_+]/g;
-  let e = document.getElementById('email').value.toString();
-  let p = document.getElementById('pass').value.toString();
-  
+/*************************************/
+// SignUp Validations and data storing 
+function signUp(){
+  validEmail();
+  validPass();
 }
+
+/*************************************/
+// Email Validation
+function validEmail(){
+  let email = document.getElementById('email').value;
+  let msg = document.getElementById('login-msg');
+  if(email.search("@")<3) msg.innerHTML += "Invalid Email"+"\n";
+}
+
+/*************************************/
+// Password Validation
+
+function validPass(){
+  
+  let pass = document.getElementById('pass').value;
+  let msg = document.getElementById('login-msg');
+  msg.innerText = "Password : ";
+
+  if(!(checkUC(pass))) msg.innerText += "UpperCase reqiured/";
+  if(!(checkLC(pass))) msg.innerText += "LowerCase reqiured/";
+  if(!(checkLen(pass))) msg.innerText += "Atleast 8 characters/";
+  if(!(checkNum(pass))) msg.innerText += "Numberic reqiured/";
+  if(!(checkSpecial(pass))) msg.innerText += "~!@#$%^&*()_+ reqiured/";
+
+  if(checkLen(pass) && checkUC(pass) && checkLC(pass) && checkNum(pass) && checkSpecial(pass)){
+    msg.innerText = "Strong Password";
+  }
+
+  return true;
+}
+
+
+/*************************************/
+// Validation Checks
+function checkNum(pass){
+  let pattern = /[0-9]/;
+  if(pattern.test(pass)) return true;
+  else return false;
+}
+
+function checkUC(pass){
+  let pattern = /[A-Z]/;
+  if(pattern.test(pass)) return true;
+  else return false;
+}
+
+function checkLC(pass){
+  let pattern = /[a-z]/;
+  if(pattern.test(pass)) return true;
+  else return false;
+}
+
+function checkLen(pass){
+  if(pass.length>=8) return true;
+  else return false;
+}
+
+function checkemail(email){
+  let emailRegEx = /[@]/;
+  if(email.search(emailRegEx)>=3) return true;
+  else return false;
+}
+
+function checkSpecial(pass){
+  let pattern = /[~!@#$%^&*()_+]/;
+  return pattern.test(pass);  
+}
+
+
+/*************************************/
+// Paragraph Buttons
 
 let para = true;
 function paraVisible(){
@@ -65,9 +132,11 @@ function paraVisible(){
     para = true;
   }
 }
+/*************************************/
 
 
-
+/*************************************/
+// To maintain css of options(movie,image,audio)
 function options(x){
   let movie = document.getElementById('movie');
   let image = document.getElementById('image');
@@ -109,96 +178,32 @@ function options(x){
     auds.style.backgroundColor = 'white';    
   }
 }
+/*************************************/
 
 
-// let email;
-// let pass;
 
-// function validLogin(){
-//    email = getCookie("email");
-//    pass = getCookie("pass");
-//    document.getElementById("login-head").innerHTML = document.cookie;
-//   if(email.includes("@")){
-//     if(email.includes(pass)){
-//       let name = email.split("@")[0];
-//       let btn = document.getElementById("login-head").innerHTML = name;
-//       document.getElementById("login-msg").innerHTML = "log in successful.";
-//       document.getElementById("login-form").style.display = "none";
-//       document.getElementById("lobtn").style.display = "block";
-//     } else {
-//       document.getElementById("login-msg").innerHTML = "Wrong Password";
-//       email = null;
-//       pass = null;
-//     }
-//   } else if(email!="" && pass!="") {
-//     let newEmail = document.getElementById("email").value.toString();
-//     let newPass = document.getElementById("pass").value.toString();
-//     setCookie("email",newEmail,1);
-//     setCookie("pass",newPass,1);
+/*************************************/
+// Login Alert 
+function isLogIn(){
+  let email = document.getElementById('email').value;
+  if(email==null || pass==null){ 
+    alert("Please log in first!!");
+  } 
+}
 
-//     let name = newEmail.split("@")[0];
-//     let btn = document.getElementById("login-head").innerHTML = name;
-//     document.getElementById("login-msg").innerHTML = "log in successful.";
-//     document.getElementById("login-form").style.display = "none";
-//     document.getElementById("lobtn").style.display = "block";
+
+
+// Loading Before site load completely
+// document.onreadystatechange = function() {
+//   if (document.readyState !== "complete") {
+//     document.querySelector(
+//     "body").style.visibility = "hidden";
+//     document.querySelector(
+//     "#loader").style.visibility = "visible";
 //   } else {
-//     document.getElementById("login-msg").innerHTML = "Wrong Email";
-//     email = null;
-//     pass = null;
+//     document.querySelector(
+//     "#loader").style.display = "none";
+//     document.querySelector(
+//     "body").style.visibility = "visible";
 //   }
-// }
-
-// function isLogIn(){
-//   checkCookie();
-//   if(email==null || pass==null){ 
-//     alert("Please log in first!!");
-//   } 
-// }
-
-// document.getElementById("lobtn").addEventListener('click',logout);
-// function logout(){
-//   document.cookie = "email=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-//   document.cookie = "pass=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-//   email = null ;
-//   pass = null ;
-//   let btn = document.getElementById("login-head").innerHTML = "Log In";
-//   document.getElementById("login-msg").innerHTML = "Logout successful.";
-//   document.getElementById("login-form").style.display = "block";
-//   document.getElementById("lobtn").style.display = "none";
-// }
-
-
-// // Cookies Operations
-
-// function setCookie(cname, cvalue, exdays) {
-//   const d = new Date();
-//   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-//   let expires = "expires="+d.toUTCString();
-//   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-// }
-
-// function getCookie(cname) {
-//   let name = cname + "=";
-//   let ca = document.cookie.split(';');
-//   for(let i = 0; i < ca.length; i++) {
-//     let c = ca[i];
-//     while (c.charAt(0) == ' ') {
-//       c = c.substring(1);
-//     }
-//     if (c.indexOf(name) == 0) {
-//       return c.substring(name.length, c.length);
-//     }
-//   }
-//   return "";
-// }
-
-// function checkCookie() {
-//   let uemail = getCookie("email");
-//   let upass = getCookie("pass");
-//   document.getElementById("login-msg").innerHTML = "Logout successful.";
-//   if (uemail != "" && pass != "") {
-//     email = uemail;
-//     pass = upass;
-//   }
-//   validLogin();
-// }
+// };

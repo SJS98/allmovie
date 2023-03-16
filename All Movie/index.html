@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,44 @@
   <link rel="stylesheet" href="style.css">
   <title>Home - All Movie</title>
 </head>
+<!---->
+<!-- <style>
+	#loader {
+		border: 12px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 12px solid #444444;
+		width: 70px;
+		height: 70px;
+		animation: spin 4s linear infinite;
+	}
+	
+	@keyframes spin {
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	
+	.center {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+</style>
+<div id="loader" class="center"></div> -->
 
-<!--  onclick="isLogIn()" -->
-<body>
-  <nav class="navbar" >
+<body onclick="isLogIn()">
+  <nav class="navbar">
     <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
+    <div id="google_translate_element" class="gt"></div>
     <ul class="menu">
-      <li><a href="#top" class="mbtn" >Home</a></li>
+      <li><a href="#top" class="mbtn">Home</a></li>
 
       <li>
-        <a href="#movie-cards" id="bolly" class="mbtn" >Bollywood</a>
-        <div class="bol-menu" id="bol-menu"  >
+        <a href="#movie-cards" id="bolly" class="mbtn">Bollywood</a>
+        <div class="bol-menu" id="bol-menu">
           <ul>
             <h4 class="bactor" onclick="location.href='shahrukh.html'">
               Shahrukh Khan</h4>
@@ -30,7 +58,7 @@
       </li>
       <li>
         <a href="#movie-cards" id="holly" class="mbtn">Hollywood</a>
-        <div class="hol-menu" id="hol-menu"  >
+        <div class="hol-menu" id="hol-menu">
           <ul>
             <h4>Tom Cruise</h4>
             <h4>Robert Downey</h4>
@@ -39,8 +67,8 @@
         </div>
       </li>
       <li>
-        <a href="#movie-cards" id="tolly" class="mbtn" >Tollywood</a>
-        <div class="tol-menu" id="tol-menu"  >
+        <a href="#movie-cards" id="tolly" class="mbtn">Tollywood</a>
+        <div class="tol-menu" id="tol-menu">
           <ul>
             <h4>Allu Arjun</h4>
             <h4>Jr.N.T.R</h4>
@@ -59,7 +87,8 @@
             <form action="#home">
               <input type="email" placeholder="Email Id" id="email">
               <input type="password" placeholder="Password" id="pass">
-              <input type="submit" value="Log In" onclick="checkCookie()">
+              <input type="submit" value="Log In" onclick="logIn()">
+              <input type="submit" value="Sign Up" onclick="signUp()">
             </form>
           </div>
           <div class="login-options">
@@ -67,17 +96,21 @@
             <abbr title="Facebook"><img src="../images/Login/facebook.png" alt=""></abbr>
             <abbr title="Twitter"><img src="../images/Login/twitter.png" alt=""></abbr>
           </div>
-          <div style="width:100%;display: flex;justify-content: center;"><h3 id="login-msg"></h3></div>
+          <div style="width:100%;display: flex;justify-content: center;text-align: center;">
+            <h4 id="login-msg"></h4>
+          </div>
         </div>
       </li>
     </ul>
   </nav>
 
-  <div class="adds-section" id="top"  >
+  <div class="adds-section" id="top">
     <div class="para">
       <h1 class="heading">World's Best Movies</h1><br>
-      <p>How many times have you sat down for the evening, gotten comfortable with your drink, put on your lounge pants.</p>
-      <p id="para"> And then you discover there are no good movies to watch? For most people, it happens frequently. </p>
+      <p>How many times have you sat down for the evening, gotten comfortable with your drink, put on your lounge pants.
+      </p>
+      <p id="para"> And then you discover there are no good movies to watch? For most people, it happens frequently.
+      </p>
       <button class="readbtn" onclick="paraVisible()">Read more</button>
       <button class="aboutbtn">Collapse</button>
     </div>
@@ -115,7 +148,7 @@
       </div>
       <div class="mimg">
         <img src="../images/mimgs/rh.jfif">
-      </div>      
+      </div>
       <div class="mimg">
         <img src="../images/mimgs/shole.jfif">
       </div>
@@ -148,7 +181,7 @@
       </div>
       <div class="mimg">
         <img src="../images/mimgs/Hollywood/sherlock.jfif">
-      </div>      
+      </div>
       <div class="mimg">
         <img src="../images/mimgs/Hollywood/martian.jfif">
       </div>
@@ -180,7 +213,7 @@
       </div>
       <div class="mimg">
         <img src="../images/mimgs/Tollywood/red.jfif">
-      </div>      
+      </div>
       <div class="mimg">
         <img src="../images/mimgs/shole.jfif">
       </div>
@@ -199,15 +232,24 @@
     </div>
 
   </div>
-
   <div class="footer">
     <h4 class="t1">&copy; <span>Copyright</span> </h4>
     <h4 class="t2">&reg; Registered in 2023</h4>
     <h4 class="t3" onclick="document.getElementById('em').display = 'block'" id="cont">Contact Us</h4>
-    <h4 class="t4" >Developed by Sabir Ali</h4>
+    <h4 class="t4">Developed by Sabir Ali</h4>
     <!-- <h4 id="em" style="display:none">sabiralishaikh355@gmail.com</h4> -->
-    
   </div>
+
   <script src="script.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>  
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        { pageLanguage: 'en' },
+        'google_translate_element'
+      );
+    }
+  </script>
 </body>
+
 </html>
