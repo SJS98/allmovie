@@ -1,0 +1,75 @@
+
+/* Responsive */
+
+@media screen and (max-width: 400px) {
+  .name {
+    font-size: 15px; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  .mbtn{
+    display: none;
+  }
+  .navbar{
+    padding-right: 0px;
+  }
+  .menu{
+    height: 20px;
+    width: 150px;
+    padding-right: 0px;
+    margin-left: -50px;
+  }
+  .adds-block{
+    display: none;
+  }
+  .bol-movie,
+  .hol-movie,
+  .tol-movie{
+    margin-left: 5%;
+    width: 90%;
+  }
+  .footer{
+    font-size: 15px;
+  }
+  .t1,.t2{
+    display: none;
+  }
+  .movie-type{
+    display: none;
+  }
+  .loginli{
+    margin-left: -30px;
+  }
+  .sm-btn{
+    border-color: white;
+  }
+  .sm-btn:hover{
+    background-color: white;
+  }
+  .menu li a{
+    border-color: white;
+    border-radius: 5px;
+  }
+
+}
+
+@media screen and (max-width : 700px){
+  .mbtn{
+    display: none;
+  }
+  .t1,.t2{
+    display: none;
+  }
+}
+
+@media screen and (max-width : 800px){
+  .adds-block{
+    display: none;
+  }
+  .menu li a{
+    margin-left:0px;
+  }
+  .bol-menu,
+  .hol-menu,
+  .tol-menu{
+    margin-left: -20px;
+  }
+}

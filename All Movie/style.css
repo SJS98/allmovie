@@ -4,7 +4,7 @@ html {
 body{
   margin:0;
   padding:0;
-  background: linear-gradient(100deg,red,black) ;
+  background-image: linear-gradient(100deg,red,black) ;
   background-repeat: no-repeat;
   cursor: default;
 }
@@ -239,7 +239,7 @@ body::-webkit-scrollbar{
 }
 
 /* Login */
-.login-canvas{
+.login-canvas,.menu-canvas{
   height: 100%;
   width: 300px;
   position: fixed;
@@ -266,7 +266,11 @@ body::-webkit-scrollbar{
 #login:active~#login-canvas{
   display: block;
 }
-.login-canvas:hover{
+#sm-btn:active~#menu-canvas{
+  display: block;
+}
+.login-canvas:hover,
+.menu-canvas:hover{
   right: 0px;
   display: block;
 }
@@ -392,45 +396,14 @@ body::-webkit-scrollbar{
 
 /* Contact Us */
 
-/* Responsive */
-
-@media screen and (max-width: 400px) {
-  .name {
-    font-size: 15px; /* The width is 100%, when the viewport is 800px or smaller */
-  }
-  .mbtn{
-    display: none;
-  }
-  .navbar{
-    padding-right: 0px;
-  }
-  .menu{
-    height: 20px;
-    width: 150px;
-    padding-right: 0px;
-    margin-left: 0px;
-  }
-  .adds-block{
-    display: none;
-  }
-  .bol-movie,
-  .hol-movie,
-  .tol-movie{
-    /* margin-left: 0; */
-    width: 100%;
-  }
-  .footer{
-    /* display: block; */
-    font-size: 15px;
-  }
-  .t1,.t2{
-    display: none;
-  }
+.sm_menu_btn li{
+  margin-top: 50px;
+  margin-left: 50px;
 }
-
-
-
-
+.sm_menu_btn li div{
+  position: relative;
+  left:50px;
+}
 
 
 /* Actors HTML-> CSS */
@@ -471,7 +444,6 @@ body::-webkit-scrollbar{
   transform: scale(1.2);
   cursor: zoom-in;
 }
-
 .movie img:hover,
 .audio img:hover{
   transform: scale(0.9);
@@ -539,4 +511,59 @@ body::-webkit-scrollbar{
   background-color: white;
   width: 108px;
   overflow: hidden;
+}
+
+
+
+
+
+/* Theme Button */
+.themebtn{
+  position: fixed;
+  height:50px;
+  width: 50px;
+  left: 10px;
+  bottom: 10px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:0px 0px 10px 0px;
+  border-radius: 10px;
+  background-color: white;
+  transition-duration: .15s;
+  z-index: 1;
+}
+.themebtn:hover{
+  width:200px;
+}
+.menubtn{
+  height:80%;
+}
+.themebtn:hover>.menubtn{
+  display: none;
+}
+#color{
+  width: 30px;
+  border:none;
+  box-shadow: 0px 0px 5px 0px ;
+  margin-left: 10px;
+  display: none;
+}
+.all_menu{
+  display: flex;
+  vertical-align: middle;
+}
+.lang{
+  margin-left: 10px;
+  box-sizing: border-box;
+  display: none;
+}
+.lang select{
+  box-sizing: border-box;
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+  border:2px solid gray;
+  border-radius: 15px;
+  text-align: center;
 }

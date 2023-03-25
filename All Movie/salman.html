@@ -50,20 +50,26 @@
       <li>
         <a class="login" id="login">Log In</a>
         <div class="login-canvas" id="login-canvas">
-          <h1 class="login-head" id="login-head">Log In</h1><br>
-          <div class="login-form">
-            <form action="">
+          <button id="lobtn" onclick="logOut()">Logout</button>
+          <h1 class="login-head" id="login-head">Log In</h1>
+          <br>
+          <div class="login-form" id="login-form">
+            <form action="#home">
               <input type="email" placeholder="Email Id" id="email">
               <input type="password" placeholder="Password" id="pass">
-              <input type="submit" value="Log In" onclick="validLogin()">
+              <input type="submit" value="Log In" onclick="logIn()">
+              <input type="submit" value="Sign Up" onclick="signUp()">
             </form>
           </div>
           <div class="login-options">
-            <abbr title="Google"><img src="../images/Login/google.png" alt="" ></abbr>
-            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt="" ></abbr>
-            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt="" ></abbr>
+            <abbr title="Google"><img src="../images/Login/google.png" alt=""></abbr>
+            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt=""></abbr>
+            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt=""></abbr>
           </div>
-          <h3 id="login-error"></h3>
+          <div class="msg" style="width:100%;text-align: center;">
+            <h4 id="valid-msg"></h4>
+            <h4 id="login-msg"></h4>
+          </div>
         </div>
       </li>
     </ul>
@@ -119,5 +125,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="loginscript.js"></script>
+  
 </body>
 </html>

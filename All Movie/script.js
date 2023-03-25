@@ -6,24 +6,20 @@ options(1);
 // To run animation of poster
 //  setInterval(changeImg,3000);
 
-// To check user have account or not
-isLogIn();
-
-
 // Script for site...
 
-const posters = [];
-posters[0] = new Image();
-posters[0].src = '../images/home poster/lagaan.jpg';
+// const posters = [];
+// posters[0] = new Image();
+// posters[0].src = '../images/home poster/lagaan.jpg';
 
-posters[1] = new Image();
-posters[1].src = '../images/home poster/raees.jpg';
+// posters[1] = new Image();
+// posters[1].src = '../images/home poster/raees.jpg';
 
-posters[2] = new Image();
-posters[2].src = '../images/home poster/kgf.jpg';
+// posters[2] = new Image();
+// posters[2].src = '../images/home poster/kgf.jpg';
 
-posters[3] = new Image();
-posters[3].src = '../images/mimgs/Tollywood/bahu.jfif';
+// posters[3] = new Image();
+// posters[3].src = '../images/mimgs/Tollywood/bahu.jfif';
 
 // posters[4] = new Image();
 // posters[4].src = '../images/mimgs/Hollywood/avt2.jfif';
@@ -34,171 +30,14 @@ posters[3].src = '../images/mimgs/Tollywood/bahu.jfif';
 // posters[6] = new Image();
 // posters[6].src = '../images/home poster/raees.jpg';
 
-let idx = 0;
+// let idx = 0;
 
-function changeImg(){
-  if(idx+1 == posters.length)
-    idx = 0;
-  document.getElementById("addimg").src = posters[idx++].src;
-  setInterval(changeImg(),3000);
-}
-
-/*************************************/
-// Login Alert
-function isLogIn(){
-  let email = localStorage.getItem('email');
-  let pass = localStorage.getItem('pass');
-  if(email==null || pass==null){
-    alert("Please log in first!!");
-  }else {
-    document.getElementById('login-head').style.display = "none";
-    document.getElementById('lobtn').style.display = "block";
-    document.getElementById('login-form').style.display = "none";
-  }
-}
-
-/*************************************/
-// Login Function
-function logIn(){
-  let email = document.getElementById('email').value;
-  let pass = document.getElementById('pass').value;
-  let localEmail = localStorage.getItem('email');
-  let localPass = localStorage.getItem('pass');
-  let msg = document.getElementById('login-msg');
-  if((email == localEmail) && (pass == localPass)){
-    document.getElementById('login-form').style.display = "none";
-    document.getElementById('lobtn').style.display = "block";
-    msg.innerText = "Log in successful!"
-  } else if((email == localEmail) && (pass != localPass)){
-    msg.innerText = "Wrong password"
-  } else if((email != localEmail) && (pass == localPass)){
-    msg.innerText = "Wrong email!"
-  } else if(localEmail == null || localPass==null){
-    msg.innerText = "Create account first!"
-  }
-}
-/*************************************/
-// log out function
-function logOut(){
-
-  localStorage.removeItem('email');
-  localStorage.removeItem('pass');
-
-  document.getElementById('login-head').style.display = "block";
-  document.getElementById('lobtn').style.display = "none";
-  document.getElementById('login-msg').innerText = "Log out successful!"
-  document.getElementById('login-form').style.display = "flex";  
-}
-
-/*************************************/
-// SignUp Validations and data storing 
-function signUp(){
-  const ev = validEmail();
-  const pv = validPass();
-  if(ev && pv){
-    let email = document.getElementById('email').value;
-    let pass = document.getElementById('pass').value;
-
-    localStorage.setItem('email',email);
-    localStorage.setItem('pass',pass);
-    
-    document.getElementById('login-head').innerText = "Loged In";
-    document.getElementById('lobtn').style.display = "block";
-    document.getElementById('login-msg').innerText = "Your account has been Created!"
-    document.getElementById('login-form').style.display = "none";
-  }
-}
-
-/*************************************/
-// Email Validation
-function validEmail(){
-
-  let email = document.getElementById('email').value;
-  let msg = document.getElementById('valid-msg');
-  msg.innerText = "";
-  if(email.search("@")<3){ 
-    msg.innerHTML = "Invalid Email"+"\n";
-    return false;
-  }
-  return true;
-}
-
-/*************************************/
-// Password Validation
-
-function validPass(){
-  
-  let pass = document.getElementById('pass').value;
-  let msg = document.getElementById('login-msg');
-  msg.innerText = "Password : ";
-
-  if(!(checkUC(pass))) msg.innerText += "UpperCase reqiured/";
-  if(!(checkLC(pass))) msg.innerText += "LowerCase reqiured/";
-  if(!(checkLen(pass))) msg.innerText += "Atleast 8 characters/";
-  if(!(checkNum(pass))) msg.innerText += "Numberic reqiured/";
-  if(!(checkSpecial(pass))) msg.innerText += "~!@#$%^&*()_+ reqiured/";
-
-  if(checkLen(pass) && checkUC(pass) && checkLC(pass) && checkNum(pass) && checkSpecial(pass)){
-    msg.innerText = "Strong Password";
-    return true;
-  }
-  return false;  
-}
-
-
-/*************************************/
-// Validation Checks
-function checkNum(pass){
-  let pattern = /[0-9]/;
-  if(pattern.test(pass)) return true;
-  else return false;
-}
-
-function checkUC(pass){
-  let pattern = /[A-Z]/;
-  if(pattern.test(pass)) return true;
-  else return false;
-}
-
-function checkLC(pass){
-  let pattern = /[a-z]/;
-  if(pattern.test(pass)) return true;
-  else return false;
-}
-
-function checkLen(pass){
-  if(pass.length>=8) return true;
-  else return false;
-}
-
-function checkemail(email){
-  let emailRegEx = /[@]/;
-  if(email.search(emailRegEx)>=3) return true;
-  else return false;
-}
-
-function checkSpecial(pass){
-  let pattern = /[~!@#$%^&*()_+]/;
-  return pattern.test(pass);  
-}
-
-
-/*************************************/
-// Paragraph Buttons
-
-let para = true;
-function paraVisible(){
-  if(para){
-    document.getElementById('para').style.transitionDuration = "1s";
-    document.getElementById('para').style.display = 'block';
-    para = false;
-  } else {
-    document.getElementById('para').style.transitionDuration = "1s";
-    document.getElementById('para').style.display = 'none';
-    para = true;
-  }
-}
-/*************************************/
+// function changeImg(){
+//   if(idx+1 == posters.length)
+//     idx = 0;
+//   document.getElementById("addimg").src = posters[idx++].src;
+//   setInterval(changeImg(),3000);
+// }
 
 
 /*************************************/
@@ -248,6 +87,25 @@ function options(x){
 
 
 
+/*************************************/
+// Theme Button
+
+// let color_picker = document.getElementById('color');
+// color_picker.addEventListener("input", function() {
+//   let color_code = document.getElementById('color').value;
+//   document.getElementsByTagName('nav')[0].style.backgroundColor = color_code;
+// });
+
+
+
+/*************************************/
+// 
+
+
+
+
+
+
 
 // Loading Before site load completely
 // document.onreadystatechange = function() {
@@ -263,3 +121,39 @@ function options(x){
 //     "body").style.visibility = "visible";
 //   }
 // };
+
+
+/*************************************/
+// Paragraph Buttons
+
+let para = true;
+function paraVisible(){
+  if(para){
+    document.getElementById('para').style.transitionDuration = "1s";
+    document.getElementById('para').style.display = 'block';
+    para = false;
+  } else {
+    document.getElementById('para').style.transitionDuration = "1s";
+    document.getElementById('para').style.display = 'none';
+    para = true;
+  }
+}
+/*************************************/
+
+
+
+/*************************************/
+// Not Working-->
+
+// let small_menu = true;
+// var closesm = document.getElementById('close-sm');
+
+// document.getElementById('close-sm').addEventListener('click',function(){
+//   if(small_menu)
+//   document.getElementById('menu-canvas').style.display = "none";
+// });
+
+
+
+
+/*************************************/
