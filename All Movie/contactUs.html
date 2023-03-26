@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="madia_style.css">
+  <link rel = "icon" href ="../AppIcon/AllMovie.png">
+  <title>Contact Us</title>
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
+
+    <ul class="menu">
+      <li onclick="isLogIn()"><a href="index.html" class="mbtn">Home</a></li>
+
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="bolly" class="mbtn" style="border-color: white;border-radius: 5px;">Bollywood</a>
+        <div class="bol-menu" id="bol-menu">
+          <ul>
+            <h4 class="bactor" onclick="location.href='shahrukh.html'">
+              Shahrukh Khan</h4>
+            <h4 class="bactor" onclick="location.href='amir.html'">
+              Amir Khan</h4>
+            <h4 class="bactor" onclick="location.href='salman.html'" style="color:black">
+              Salman Khan</h4>
+          </ul>
+        </div>
+      </li>
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="holly" class="mbtn">Hollywood</a>
+        <div class="hol-menu" id="hol-menu">
+          <ul>
+            <h4>Tom Cruise</h4>
+            <h4>Robert Downey</h4>
+            <h4>Johnny Depp</h4>
+          </ul>
+        </div>
+      </li>
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="tolly" class="mbtn">Tollywood</a>
+        <div class="tol-menu" id="tol-menu">
+          <ul>
+            <h4>Allu Arjun</h4>
+            <h4>Jr.N.T.R</h4>
+            <h4>Ram Charan</h4>
+          </ul>
+        </div>
+      </li>
+
+      <li class="loginli">
+        <a class="login" id="login">Log In</a>
+        <div class="login-canvas" id="login-canvas">
+          <button id="lobtn" onclick="logOut()">Logout</button>
+          <h1 class="login-head" id="login-head">Log In</h1>
+          <br>
+          <div class="login-form" id="login-form">
+            <form action="#home">
+              <input type="email" placeholder="Email Id" id="email">
+              <input type="password" placeholder="Password" id="pass">
+              <input type="submit" value="Log In" onclick="logIn()">
+              <input type="submit" value="Sign Up" onclick="signUp()">
+            </form>
+          </div>
+          <div class="login-options">
+            <abbr title="Google"><img src="../images/Login/google.png" alt=""></abbr>
+            <abbr title="Facebook"><img src="../images/Login/facebook.png" alt=""></abbr>
+            <abbr title="Twitter"><img src="../images/Login/twitter.png" alt=""></abbr>
+          </div>
+          <div class="msg" style="width:100%;text-align: center;">
+            <h4 id="valid-msg"></h4>
+            <h4 id="login-msg"></h4>
+          </div>
+        </div>
+      </li>
+
+      <li class="small-menu">
+        <a class="sm-btn" id="sm-btn">...</a>
+        <div class="menu-canvas" id="menu-canvas">
+          <div class="sm_menu_btn">
+            <ul class="menu">
+              <li onclick="isLogIn()"><a href="index.html" class="smbtn">Home</a></li>
+              <li onclick="isLogIn()">
+                <a href="" id="bolly" class="smbtn">Bollywood</a>
+                <div class="bol-menu" id="bol-menu">
+                  <ul>
+                    <h4 class="bactor" onclick="location.href='shahrukh.html'">
+                      Shahrukh Khan</h4>
+                    <h4 class="bactor" onclick="location.href='amir.html'">
+                      Amir Khan</h4>
+                    <h4 class="bactor" onclick="location.href='salman.html'" style="color:black">
+                      Salman Khan</h4>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="isLogIn()">
+                <a href="" id="holly" class="smbtn">Hollywood</a>
+                <div class="hol-menu" id="hol-menu">
+                  <ul>
+                    <h4>Tom Cruise</h4>
+                    <h4>Robert Downey</h4>
+                    <h4>Johnny Depp</h4>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="isLogIn()">
+                <a href="" id="tolly" class="smbtn">Tollywood</a>
+                <div class="tol-menu" id="tol-menu">
+                  <ul>
+                    <h4>Allu Arjun</h4>
+                    <h4>Jr.N.T.R</h4>
+                    <h4>Ram Charan</h4>
+                  </ul>
+                </div>
+              </li>
+  
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div>
+    <pre>
+
+
+
+
+
+
+
+
+
+  <h1 style="color:white;border: 1px dotted white;width: 80%;">
+  Thanks For
+  Contacting us.
+  </h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </pre>
+  </div>
+
+  <div class="footer">
+    <h4 class="t1">&copy; <span>Copyright</span> </h4>
+    <h4 class="t2">&reg; Registered in 2023</h4>
+    <h4 class="t3">Contact Us</h4>
+    <h4 class="t4">Developed by Sabir Ali</h4>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="loginscript.js"></script>
+  
+</body>
+</html>
