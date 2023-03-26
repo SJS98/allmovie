@@ -1,3 +1,6 @@
+
+document.documentElement.lang = 'ru';
+
 // For Default Script
 
 // To maintain css of options(movie,image,audio)

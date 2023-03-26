@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="madia_style.css">
+  <link rel = "icon" href ="../AppIcon/AllMovie.png">
   <title>Home - All Movie</title>
 </head>
 <!---->
@@ -42,7 +43,8 @@
     <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
 
     <ul class="menu">
-      <li onclick="isLogIn()"><a href="#top" class="mbtn">Home</a></li>
+
+      <li onclick="isLogIn()"><a href="#top" class="mbtn" style="border-color: white;border-radius: 5px;">Home</a></li>
 
       <li onclick="isLogIn()">
         <a href="#movie-cards" id="bolly" class="mbtn">Bollywood</a>
@@ -110,7 +112,7 @@
           <div class="sm_menu_btn">
             <ul class="menu">
               <li onclick="isLogIn()"><a href="#top" class="smbtn">Home</a></li>
-        
+
               <li onclick="isLogIn()">
                 <a href="#movie-cards" id="bolly" class="smbtn">Bollywood</a>
                 <div class="bol-menu" id="bol-menu">
@@ -144,7 +146,7 @@
                   </ul>
                 </div>
               </li>
-  
+
           </div>
         </div>
       </li>
@@ -281,36 +283,35 @@
   </div>
 
   <div class="themebtn" id="themebtn">
-  <img src="../images/icons/menu.png" class="menubtn">
-  <div class="all_menu">
-    <div class="clr">
-      <input type="color" id="color" clas="color">
+    <img src="../images/icons/menu.png" class="menubtn">
+    <div class="all_menu">
+      <div class="clr">
+        <input type="color" id="color" clas="color">
+      </div>
+      <div class="lang" id="lang">
+        <select name="lang" id="lang">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="ur">Urdu</option>
+          <option value="ta">Tamil</option>
+        </select>
+      </div>
+
     </div>
-    <div class="lang" id="lang">
-      <select name="lang" id="lang">
-        <option value="en">English</option>
-        <option value="hi">Hindi</option>
-        <option value="ur">Urdu</option>
-        <option value="ta">Tamil</option>
-      </select>
-    </div>
-    
-  </div>
-  
+
   </div>
 
   <div class="footer">
     <h4 class="t1">&copy; <span>Copyright</span> </h4>
     <h4 class="t2">&reg; Registered in 2023</h4>
-    <h4 class="t3" onclick="document.getElementById('em').display = 'block'" id="cont">Contact Us</h4>
+    <h4 class="t3" onclick="location.href='./contactUs.html'" style="cursor: pointer;">Contact Us</h4>
     <h4 class="t4">Developed by Sabir Ali</h4>
-    <!-- <h4 id="em" style="display:none">sabiralishaikh355@gmail.com</h4> -->
   </div>
 
   <script src="script.js"></script>
   <script src="script2.js"></script>
   <script src="loginscript.js"></script>
-  
+
   <!-- <div id="google_translate_element" class="gt"></div>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <script>  

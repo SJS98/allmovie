@@ -5,29 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="madia_style.css">
+  <link rel = "icon" href ="../AppIcon/AllMovie.png">
   <title>Bollywood - Shahrukh Khan</title>
 </head>
 <body>
-  <nav class="navbar" >
-    <h1 class="name"><span class="A">A</span>ll<span class="M">M</span>ovie</h1>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+  <nav class="navbar" id="navbar">
+    <h1 class="name"><span class="A">A</span>ll <span class="M">M</span>ovie</h1>
 
-      <li>
-        <a href="#movie-cards" id="bolly">Bollywood</a>
+    <ul class="menu">
+      <li onclick="isLogIn()" ><a href="index.html" class="mbtn" >Home</a></li>
+
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="bolly" class="mbtn" style="border-color: white;border-radius: 5px;">Bollywood</a>
         <div class="bol-menu" id="bol-menu">
           <ul>
-            <h4 class="bactor" onclick="location.href='shahrukh.html'">Shahrukh Khan</h4>
-            <h4 class="bactor" onclick="location.href='amir.html'">Amir Khan</h4>
-            <h4 class="bactor" onclick="location.href='salman.html'">Salman Khan</h4>
+            <h4 class="bactor" onclick="location.href='shahrukh.html'" style="color:black">
+              Shahrukh Khan</h4>
+            <h4 class="bactor" onclick="location.href='amir.html'">
+              Amir Khan</h4>
+            <h4 class="bactor" onclick="location.href='salman.html'">
+              Salman Khan</h4>
           </ul>
         </div>
-        
-      
       </li>
-      <li>
-        <a href="#movie-cards" id="holly">Hollywood</a>
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="holly" class="mbtn">Hollywood</a>
         <div class="hol-menu" id="hol-menu">
           <ul>
             <h4>Tom Cruise</h4>
@@ -36,18 +39,18 @@
           </ul>
         </div>
       </li>
-      <li>
-        <a href="#movie-cards" id="tolly">Tollywood</a>
+      <li onclick="isLogIn()">
+        <a href="#movie-cards" id="tolly" class="mbtn">Tollywood</a>
         <div class="tol-menu" id="tol-menu">
           <ul>
             <h4>Allu Arjun</h4>
-            <h4>N.T.Jr.</h4>
+            <h4>Jr.N.T.R</h4>
             <h4>Ram Charan</h4>
           </ul>
         </div>
       </li>
 
-      <li>
+      <li class="loginli">
         <a class="login" id="login">Log In</a>
         <div class="login-canvas" id="login-canvas">
           <button id="lobtn" onclick="logOut()">Logout</button>
@@ -72,11 +75,56 @@
           </div>
         </div>
       </li>
+
+      <li class="small-menu">
+        <a class="sm-btn" id="sm-btn">...</a>
+        <div class="menu-canvas" id="menu-canvas">
+          <div class="sm_menu_btn">
+            <ul class="menu">
+              <li onclick="isLogIn()"><a href="index.html" class="smbtn">Home</a></li>
+        
+              <li onclick="isLogIn()">
+                <a href="#movie-cards" id="bolly" class="smbtn">Bollywood</a>
+                <div class="bol-menu" id="bol-menu">
+                  <ul>
+                    <h4 class="bactor" onclick="location.href='shahrukh.html'" style="color:black">
+                      Shahrukh Khan</h4>
+                    <h4 class="bactor" onclick="location.href='amir.html'">
+                      Amir Khan</h4>
+                    <h4 class="bactor" onclick="location.href='salman.html'">
+                      Salman Khan</h4>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="isLogIn()">
+                <a href="#movie-cards" id="holly" class="smbtn">Hollywood</a>
+                <div class="hol-menu" id="hol-menu">
+                  <ul>
+                    <h4>Tom Cruise</h4>
+                    <h4>Robert Downey</h4>
+                    <h4>Johnny Depp</h4>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="isLogIn()">
+                <a href="#movie-cards" id="tolly" class="smbtn">Tollywood</a>
+                <div class="tol-menu" id="tol-menu">
+                  <ul>
+                    <h4>Allu Arjun</h4>
+                    <h4>Jr.N.T.R</h4>
+                    <h4>Ram Charan</h4>
+                  </ul>
+                </div>
+              </li>
+          </div>
+        </div>
+      </li>
     </ul>
   </nav>
 
 
-  <div class="movie" id="movie">
+
+  <div class="movie" id="movie" class="actor_details">
     <img src="../images/actors/shahrukh/s1.jfif" alt="">
     <img src="../images/actors/shahrukh/s2.jfif" alt="">
     <img src="../images/actors/shahrukh/s3.jfif" alt="">
@@ -91,7 +139,7 @@
     <img src="../images/actors/shahrukh/s12.jfif" alt="">
   </div>
 
-  <div class="image" id="image">
+  <div class="image" id="image" class="actor_details">
     <img src="../images/actors/shahrukh/shah_img/s1.jpg">
     <img src="../images/actors/shahrukh/shah_img/s2.jpg">
     <img src="../images/actors/shahrukh/shah_img/s3.jpg">
@@ -106,7 +154,7 @@
     <img src="../images/actors/shahrukh/shah_img/s12.jpg">
 
   </div>
-  <div class="audio" id="audio"></div>
+  <div class="audio" id="audio" class="actor_details"></div>
   
   <div class="options">
     <div class="op-icons">
@@ -117,10 +165,10 @@
   </div>
   
   <div class="footer">
-    <h4>&copy; <span>Copyright</span> </h4>
-    <h4>&reg; Registered in 2023</h4>
-    <h4>Contact Us</h4>
-    <h4>Developed by Sabir Ali</h4>
+    <h4 class="t1">&copy; <span>Copyright</span> </h4>
+    <h4 class="t2">&reg; Registered in 2023</h4>
+    <h4 class="t3" onclick="location.href='./contactUs.html'" style="cursor: pointer;">Contact Us</h4>
+    <h4 class="t4">Developed by Sabir Ali</h4>
   </div>
 
   <script src="script.js"></script>

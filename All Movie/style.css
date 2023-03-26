@@ -5,6 +5,7 @@ body{
   margin:0;
   padding:0;
   background-image: linear-gradient(100deg,red,black) ;
+  width: 100vw;
   background-repeat: no-repeat;
   cursor: default;
 }
@@ -152,6 +153,9 @@ body::-webkit-scrollbar{
 }
 .bol-menu,.hol-menu,.tol-menu{
   box-shadow:0px 20px 20px -5px black;
+}
+.small-menu{
+  visibility: hidden;
 }
 
 /* Bollywood Menu */
@@ -360,13 +364,14 @@ body::-webkit-scrollbar{
   box-shadow: 0px 0px 5px 0px black;
 }
 .movie-cards img:hover{
-  /* opacity: .8; */
   cursor: pointer;
   transform: scale(1.1);
   transition: .15s;
   box-shadow:inset 0px 0px 5px 0px black;
 }
 .footer{
+  position: relative;
+  bottom: 0px;
   margin-left: 10%;
   border-radius: 20px;
   height:40px;
@@ -405,35 +410,30 @@ body::-webkit-scrollbar{
   left:50px;
 }
 
-
 /* Actors HTML-> CSS */
-.movie,
-.image,
-.audio {
-  display: flex;
+.movie,.image{
   overflow: scroll;
-  height: fit-content;
-  align-items: center;
+  height: 70vh;
 }
-
 .movie::-webkit-scrollbar,
 .image::-webkit-scrollbar,
 .audio::-webkit-scrollbar{
   display: none;
 }
-
 .movie img,
 .audio img
 {
-  height: 300px;
-  border-radius: 10px;
+  width: 100%;                
+  border-radius: 10px;         
   box-shadow: 5px 5px 10px -5px;
   margin: 20px;
-  transition: all .15s;
+              
+  transition: all .15s;        
 }
 
 .image img{
-  height: 200px;
+  width: max-content;
+  height: 90%;
   border-radius: 10px;
   box-shadow: 5px 5px 10px -5px;
   margin: 20px;
@@ -448,26 +448,18 @@ body::-webkit-scrollbar{
 .audio img:hover{
   transform: scale(0.9);
 }
-.movie{
-  height: 340px;
-}
 
 .image,.audio{
-  height: 340px;
   display: none;
 }
-
-
-
-
-
-
 
 
 
 .options{
   margin-top: 20px;
   margin-bottom: 30px;
+  position: relative;
+  bottom: 0px;
   display: flex;
   width: 100%;
   justify-content: center;

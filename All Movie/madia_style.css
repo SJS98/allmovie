@@ -26,9 +26,6 @@
     margin-left: 5%;
     width: 90%;
   }
-  .footer{
-    font-size: 15px;
-  }
   .t1,.t2{
     display: none;
   }
@@ -48,15 +45,27 @@
     border-color: white;
     border-radius: 5px;
   }
-
+  .op-icons{
+    width: 70%;
+  }
 }
 
 @media screen and (max-width : 700px){
+  .small-menu{
+    visibility: visible;
+  }
   .mbtn{
     display: none;
   }
   .t1,.t2{
     display: none;
+  }
+  .op-icons{
+    width: 50%;
+  }
+  .footer{
+    margin-top: 65px;
+    font-size: 15px;
   }
 }
 
